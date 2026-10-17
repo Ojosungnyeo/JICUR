@@ -141,6 +141,8 @@ iOSInjectionProject/
 
 ### Env
 *.xcconfig
+!JICUR/Config.xcconfig
+JICUR/Secrets.xcconfig
 .env
 
 

@@ -6,8 +6,14 @@
 	objectVersion = 110;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		B100000130811CDE00ABFE41 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = B100001130811CDE00ABFE41 /* ComposableArchitecture */; };
+		B100000230811CDE00ABFE41 /* GoogleMaps in Frameworks */ = {isa = PBXBuildFile; productRef = B100001230811CDE00ABFE41 /* GoogleMaps */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		A496F0F930811CDE00ABFE41 /* JICUR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JICUR.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B100003130811CDE00ABFE41 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -22,6 +28,8 @@
 		A496F0F630811CDE00ABFE41 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
+				B100000130811CDE00ABFE41 /* ComposableArchitecture in Frameworks */,
+				B100000230811CDE00ABFE41 /* GoogleMaps in Frameworks */,
 			);
 		};
 /* End PBXFrameworksBuildPhase section */
@@ -30,6 +38,7 @@
 		A496F0F030811CDE00ABFE41 = {
 			isa = PBXGroup;
 			children = (
+				B100003130811CDE00ABFE41 /* Config.xcconfig */,
 				A496F0FB30811CDE00ABFE41 /* JICUR */,
 				A496F0FA30811CDE00ABFE41 /* Products */,
 			);
@@ -60,6 +69,10 @@
 				A496F0FB30811CDE00ABFE41 /* JICUR */,
 			);
 			name = JICUR;
+			packageProductDependencies = (
+				B100001130811CDE00ABFE41 /* ComposableArchitecture */,
+				B100001230811CDE00ABFE41 /* GoogleMaps */,
+			);
 			productName = JICUR;
 			productReference = A496F0F930811CDE00ABFE41 /* JICUR.app */;
 			productType = "com.apple.product-type.application";
@@ -88,6 +101,10 @@
 			);
 			mainGroup = A496F0F030811CDE00ABFE41;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				B100002130811CDE00ABFE41 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				B100002230811CDE00ABFE41 /* XCRemoteSwiftPackageReference "ios-maps-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A496F0FA30811CDE00ABFE41 /* Products */;
 			projectDirPath = "";
@@ -238,6 +255,7 @@
 		};
 		A496F10530811CDF00ABFE41 /* Debug configuration for PBXNativeTarget "JICUR" */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B100003130811CDE00ABFE41 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -245,7 +263,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6B47X24XTW;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -270,6 +289,7 @@
 		};
 		A496F10630811CDF00ABFE41 /* Release configuration for PBXNativeTarget "JICUR" */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B100003130811CDE00ABFE41 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -277,7 +297,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6B47X24XTW;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -320,6 +341,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B100002130811CDE00ABFE41 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.26.0;
+			};
+		};
+		B100002230811CDE00ABFE41 /* XCRemoteSwiftPackageReference "ios-maps-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googlemaps/ios-maps-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B100001130811CDE00ABFE41 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B100002130811CDE00ABFE41 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+		B100001230811CDE00ABFE41 /* GoogleMaps */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B100002230811CDE00ABFE41 /* XCRemoteSwiftPackageReference "ios-maps-sdk" */;
+			productName = GoogleMaps;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A496F0F130811CDE00ABFE41 /* Project object */;
 	validationLevel = 1;
